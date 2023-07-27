@@ -25,8 +25,9 @@ while true; do
     echo "12. control_v11p_sd15_seg.pth"
     echo "13. control_v11p_sd15_softedge.pth"
     echo "14. control_v11p_sd15s2_lineart_anime.pth"
-    echo "15. control_v1p_sd15_qrcode_monster.safetensors"    
-    echo "16.  退出"
+    echo "15. control_v1p_sd15_qrcode_monster.safetensors"
+    echo "16. control_v1p_sd15_brightness.safetensors"    
+    echo "17.  退出"
     echo "请输入对应编号："
     read choice
 
@@ -92,6 +93,10 @@ while true; do
             download_file "https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster/resolve/main/control_v1p_sd15_qrcode_monster.safetensors" "control_v1p_sd15_qrcode_monster.safetensors"
             ;;
         16)
+            download_file "https://huggingface.co/ViscoseBean/control_v1p_sd15_brightness/resolve/main/control_v1p_sd15_brightness.safetensors" "control_v1p_sd15_brightness.safetensors"
+            download_file "https://huggingface.co/ViscoseBean/control_v1p_sd15_brightness/resolve/main/control_v1p_sd15_brightness.yaml" "control_v1p_sd15_brightness.yaml"
+            ;;
+        17)
             echo "退出程序"
             break
             ;;
