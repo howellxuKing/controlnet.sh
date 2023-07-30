@@ -1,3 +1,14 @@
+#!/bin/bash
+# 显示注意事项
+echo "################################################################################"
+echo "注意事项："
+echo -e "\e[31m注意事项：\e[0m"
+echo -e "\e[31m1. 请确保在运行之前已经安装了wget命令。\e[0m"
+echo -e "\e[31m2. 运行此脚本将下载指定的controlnet模型文件到指定的目录。\e[0m"
+echo -e "\e[31m3. 下载的文件将保存在 \"/home/ubuntu/stable-diffusion-webui/extensions/sd-webui-controlnet/models/\" 目录下。\e[0m"
+echo -e "\e[31m4. 如果遇到任何问题，请联系 微信：relxa0 寻求帮助。\e[0m"
+echo "################################################################################"
+echo
 function download_file(){
 url=$1
 filename=$2
