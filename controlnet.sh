@@ -11,7 +11,7 @@ echo
 function download_file(){
 url=$1
 filename=$2
-wget -O "/home/ubuntu/stable-diffusion-webui/extensions/sd-webui-controlnet/models/$filename" "$url"
+wget -O "/home/ubuntu/stable-diffusion-webui/stable-diffusion-webui/extensions/sd-webui-controlnet/models/$filename" "$url"
 }
 while true;do
 echo "输入编号，下载对应controlnet模型："
