@@ -10,12 +10,19 @@ echo -e "\e[31m4. 如果遇到任何问题，请联系 微信：relxa0 寻求帮
 echo "################################################################################"
 
 # 等待用户输入 "YES"
-echo -e -n "\e[31m请输入 YES 继续运行脚本,输入不正确，脚本终止: \e[5m"
-read input
-if [[ "$input" != "YES" && "$input" != "yes" && "$input" != "y" && "$input" != "Y" ]]; then
-  echo -e "\e[31m输入不正确，脚本终止\e[0m"
-  exit 1
-fi
+while true; do
+  echo -e "\e[31m请确认是否继续运行此脚本（y/n）: \e[0m"
+  read input
+
+  if [[ "$input" == "y" || "$input" == "Y" ]]; then
+    break
+  elif [[ "$input" == "n" || "$input" == "N" ]]; then
+    echo -e "\e[31m脚本终止\e[0m"
+    exit 1
+  else
+    echo -e "\e[31m输入错误，请重新输入\e[0m"
+  fi
+done
 
 # 更新包列表
 sudo apt update
