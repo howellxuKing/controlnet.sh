@@ -11,18 +11,19 @@ echo "##########################################################################
 
 # 等待用户输入 "YES"
 while true; do
-  echo -e "\e[31m请确认是否继续运行此脚本（y/n）: \e[0m"
-  read -n 1 input
+  read -p $'\e[31m请确认是否继续运行此脚本（y/n）: \e[0m' -n 1 input
 
   if [[ "$input" == "y" || "$input" == "Y" ]]; then
+    echo ""
     break
   elif [[ "$input" == "n" || "$input" == "N" ]]; then
-    echo -e "\e[31m脚本终止\e[0m"
+    echo -e "\n\e[31m脚本终止\e[0m"
     exit 1
   else
-    echo -e "\e[31m输入错误，请重新输入\e[0m"
+    echo -e "\n\e[31m输入错误，请重新输入\e[0m"
   fi
 done
+
 
 # 更新包列表
 sudo apt update
