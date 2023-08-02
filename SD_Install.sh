@@ -1,20 +1,22 @@
 #!/bin/bash
 # 显示注意事项
 echo "################################################################################"
-echo "注意事项："
 echo -e "\e[31m注意事项：\e[0m"
-echo -e "\e[31m1. 此为安装和运行Stable Diffusion脚本。\e[0m"
-echo -e "\e[31m2. 运行此脚本将下载更新服务器依赖项。\e[0m"
-echo -e "\e[31m3. 下载的文件多，运行时间长，速度根据你服务器情况而定。\e[0m"
+echo -e "\e[31m1. 此为安装和运行Stable Diffusion webui脚本，目前版本为1.5.1。\e[0m"
+echo -e "\e[31m2. 如果已经安装完成，再次运行脚本将自动启动Stable Diffusion。\e[0m"
+echo -e "\e[31m2. 运行此脚本会自动更新服务器依赖项（只需几秒钟）。\e[0m"
+echo -e "\e[31m3. 下载的文件较多，运行时间长，速度根据你服务器情况而定。\e[0m"
 echo -e "\e[31m4. 如果遇到任何问题，请联系 微信：relxa0 寻求帮助。\e[0m"
 echo "################################################################################"
 
 # 等待用户输入 "YES"
-read -p "请输入 YES 继续运行脚本: " input
-if [ "$input" != "YES" ]; then
-  echo "输入不正确，脚本终止"
+echo -e "\e[31m请输入 YES 继续运行脚本，输入不正确，脚本终止: \e[0m"
+read input
+if [[ "$input" != "YES" && "$input" != "yes" && "$input" != "y" && "$input" != "Y" ]]; then
+  echo -e "\e[31m输入不正确，脚本终止\e[0m"
   exit 1
 fi
+
 # 更新包列表
 sudo apt update
 
