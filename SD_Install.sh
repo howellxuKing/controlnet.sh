@@ -12,7 +12,7 @@ echo "##########################################################################
 # 等待用户输入 "YES"
 while true; do
   echo -e "\e[31m请确认是否继续运行此脚本（y/n）: \e[0m"
-  read input
+  read -n 1 input
 
   if [[ "$input" == "y" || "$input" == "Y" ]]; then
     break
