@@ -35,7 +35,7 @@ sudo apt install wget git python3 python3-venv -y
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 # 切换到克隆的仓库目录
-cd stable-diffusion-webui
+cd stable-diffusion-webui/stable-diffusion-webui
 
 # 运行脚本
 ./webui.sh --share --enable-insecure-extension-access
